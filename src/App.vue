@@ -14,22 +14,33 @@
       </div>
     </a>
   </header>
-  <main>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita est nihil suscipit, 
-      reiciendis quos nulla nobis architecto earum itaque consequatur laboriosam eius mollitia
-      optio vitae, delectus quis, non ut consectetur. Lorem ipsum dolor sit amet consectetur adipisicing
-       elit. Necessitatibus, doloremque at deleniti quam quaerat ea, optio sapiente in rem omnis, temporibus
-        excepturi ex hic voluptate ipsum? Velit error cumque aspernatur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita est nihil suscipit, 
-      reiciendis quos nulla nobis architecto earum itaque consequatur laboriosam eius mollitia
-      optio vitae, delectus quis, non ut consectetur. Lorem ipsum dolor sit amet consectetur adipisicing
-       elit. Necessitatibus, doloremque at deleniti quam quaerat ea, optio sapiente in rem omnis, temporibus
-        excepturi ex hic voluptate ipsum? Velit error cumque aspernatur.
+  <main class="flex flex-grow flex-col">
+      Main
   </main>
+  <nav class="sticky bottom-0 bg-white">
+    <ul class="flex justify-around items-center">
+      <li class="flex-1">
+        <a href="#timeline" class="flex flex-col items-center p-2 text-xs capitalize">
+          <ClockIcon class="h-6 w-6"/>timeline
+        </a>
+      </li>
+      <li class="flex-1">
+        <a href="#activites" class="flex flex-col items-center p-2 text-xs capitalize">
+          <ListBulletIcon class="h-6 w-6"/>activites
+        </a>
+      </li>
+      <li class="flex-1">
+        <a href="#progress" class="flex flex-col items-center p-2 text-xs capitalize">
+          <ChartBarIcon class="h-6 w-6"/>progress
+        </a>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script setup>
   import { CheckCircleIcon} from '@heroicons/vue/24/solid'
+  import { ClockIcon, ListBulletIcon, ChartBarIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <style scoped>
