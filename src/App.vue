@@ -3,8 +3,15 @@
     <a href="#">
       <img src="./assets/logo.png" alt="logo" class="h-9">
     </a>
-    <a href="#">
-      Day Complete!
+    <a href="#" class="text-md">
+      <div v-if="false" class="flex items-center gap-1">
+        Day Complete!
+        <CheckCircleIcon class="h-7 text-green-500"/>
+      </div>
+      <div v-else class="flex items-center gap-1">
+        <div>Progress: <span class="font-mono">20%</span></div>
+        <div class="h-3 w-3 rounded-full bg-red-500"></div>
+      </div>
     </a>
   </header>
   <main>
@@ -22,7 +29,7 @@
 </template>
 
 <script setup>
-
+  import { CheckCircleIcon} from '@heroicons/vue/24/solid'
 </script>
 
 <style scoped>
