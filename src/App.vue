@@ -19,19 +19,9 @@
   </main>
   <nav class="sticky bottom-0 bg-white">
     <ul class="flex justify-around items-center">
-      <li class="flex-1">
-        <a href="#timeline" class="flex flex-col items-center p-2 text-xs capitalize">
-          <ClockIcon class="h-6 w-6"/>timeline
-        </a>
-      </li>
-      <li class="flex-1">
-        <a href="#activites" class="flex flex-col items-center p-2 text-xs capitalize">
-          <ListBulletIcon class="h-6 w-6"/>activites
-        </a>
-      </li>
-      <li class="flex-1">
-        <a href="#progress" class="flex flex-col items-center p-2 text-xs capitalize">
-          <ChartBarIcon class="h-6 w-6"/>progress
+      <li v-for="icon, page in navItems" :key="page" class="flex-1">
+        <a :href="`#${page}`" class="flex flex-col items-center p-2 text-xs capitalize">
+          <component :is="icon" class="h-6 w-6"/>{{ page }}
         </a>
       </li>
     </ul>
@@ -41,6 +31,12 @@
 <script setup>
   import { CheckCircleIcon} from '@heroicons/vue/24/solid'
   import { ClockIcon, ListBulletIcon, ChartBarIcon } from '@heroicons/vue/24/outline'
+
+  const navItems = {
+    timeline: ClockIcon,
+    activites: ListBulletIcon,
+    progress: ChartBarIcon
+  }
 </script>
 
 <style scoped>
