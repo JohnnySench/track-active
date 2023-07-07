@@ -6,8 +6,8 @@
 </template>
 
 <script setup>
-    import TheHeaderProgress from './TheHeaderProgress.vue'
-    import TheLogo from './TheLogo.vue';
+  import TheHeaderProgress from './TheHeaderProgress.vue'
+  import TheLogo from './TheLogo.vue';
 
 
 </script>
