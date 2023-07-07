@@ -1,6 +1,6 @@
 <template>
    <a href="#" class="text-md">
-      <div v-if="true" class="flex items-center gap-1">
+      <div v-if="false" class="flex items-center gap-1">
         Day Complete!
         <CheckCircleIcon class="h-7 text-green-500"/>
       </div>

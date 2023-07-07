@@ -6,5 +6,5 @@
 
 <script setup>
 
-const some = [1,3,3,5]
+    const some = [1,3,3,5]
 </script>
