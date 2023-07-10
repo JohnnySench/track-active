@@ -1,11 +1,14 @@
 <template>
-  <TheHeader/>
+  <TheHeader 
+    @go-to-timeline="goTo(PAGE_TIMELINE)"
+    @go-to-progress="goTo(PAGE_PROGRESS)"
+    />
   <main class="flex flex-grow flex-col">
       <TheProgress v-show="currentPage === PAGE_PROGRESS"/>
       <TheActivities v-show="currentPage === PAGE_ACTIVITIES"/>
       <TheTimeline v-show="currentPage === PAGE_TIMELINE"/>
   </main>
-  <TheNav :current-page="currentPage" @navigate="currentPage = $event"/>
+  <TheNav :current-page="currentPage" @navigate="goTo($event)"/>
 </template>
 
 <script setup>
@@ -32,4 +35,9 @@
 
     return PAGE_TIMELINE
   }
+
+  function goTo(page) {
+    currentPage.value = page
+  }
+
 </script>

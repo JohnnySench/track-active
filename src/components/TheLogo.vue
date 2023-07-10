@@ -1,10 +1,10 @@
 <template>
-    <a href="#">
+    <a :href="`#${PAGE_TIMELINE}`">
       <img src="../assets/logo.png" alt="logo" class="h-9">
     </a>
 </template>
 
 <script setup>
 
-    const some = [1,3,3,5]
+    import { PAGE_TIMELINE } from '../constants';
 </script>
